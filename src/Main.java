@@ -138,11 +138,15 @@ public class Main
                     int triangle = input.nextInt();
                     if (triangle == 1)
                     {
-
+                        Matrix triangleMatrix = new Matrix();
+                        triangleMatrix.MatrixCreate();
+                        triangleMatrix.upperTriangularMatrix(triangleMatrix.matrix);
                     }
                     else if (triangle ==2)
                     {
-
+                        Matrix triangleMatrix = new Matrix();
+                        triangleMatrix.MatrixCreate();
+                        triangleMatrix.lowerTriangularMatrix(triangleMatrix.matrix);
                     }
                     break;
                 case (0):

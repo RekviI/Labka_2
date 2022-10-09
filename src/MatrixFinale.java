@@ -121,6 +121,68 @@ public final class MatrixFinale
         return Arrays.hashCode(ImmutableMatrix);
     }
 
+    static void ImmutableLowerTriangularMatrix(int matrix[][])
+    {
+        int row = matrix.length;
+        int col = matrix[0].length;
+        if (row != col)
+        {
+            System.out.println("Матриця повинна бути квадратною");
+        }
+        else
+        {
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    if (i < j)
+                    {
+                        matrix[i][j] = 0;
+                    }
+                }
+            }
+            System.out.println("Отримана нижня трикутна матриця: ");
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    System.out.print(matrix[i][j] + "\t");
+                }
+                System.out.println();
+            }
+        }
+    }
+    static void ImmutableUpperTriangularMatrix(int matrix[][])
+    {
+        int row = matrix.length;
+        int col = matrix[0].length;
+        if (row != col)
+        {
+            System.out.println("Матриця повинна бути квадратною");
+        }
+        else
+        {
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    if (j < i)
+                    {
+                        matrix[i][j] = 0;
+                    }
+                }
+            }
+            System.out.println("Отримана верхня трикутна матриця: ");
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    System.out.print(matrix[i][j] + "\t");
+                }
+                System.out.println();
+            }
+        }
+    }
     public static void ImmutablePrintMatrix(int[][] matrix)
     {
         for (int r = 0; r < matrix.length; r++)
